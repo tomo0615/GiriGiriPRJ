@@ -10,5 +10,5 @@ public class PlayerInputs : IPlayerInputs
     }
 
     public Vector3 MoveDirection() =>
-        new Vector3(_horizontal, 0);
+        new Vector3(_horizontal*2, 0);
 }
