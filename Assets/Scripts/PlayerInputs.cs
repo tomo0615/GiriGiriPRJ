@@ -9,6 +9,6 @@ public class PlayerInputs : IPlayerInputs
         _horizontal = Input.GetAxisRaw("Horizontal");
     }
 
-    public Vector2 MoveDirection() =>
-        new Vector2(_horizontal, 0);
+    public Vector3 MoveDirection() =>
+        new Vector3(_horizontal, 0);
 }

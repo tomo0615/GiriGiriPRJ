@@ -4,6 +4,6 @@ public interface IPlayerInputs
 {
     void Inputting();
 
-    Vector2 MoveDirection();
+    Vector3 MoveDirection();
 }
 
