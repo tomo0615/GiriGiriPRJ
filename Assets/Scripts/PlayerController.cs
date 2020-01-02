@@ -19,8 +19,9 @@ public class PlayerController : MonoBehaviour
         this.UpdateAsObservable()
             .Subscribe(_ => _playerInputs.Inputting());
 
-        //移動　TODO:移動の制限を作る
-        this.ObserveEveryValueChanged(x => _playerInputs.MoveDirection())
+        this.ObserveEveryValueChanged(_ => _playerInputs.MoveDirection())
+            .Select(x => transform.position + _playerInputs.MoveDirection())
+            .Where(x => Mathf.Abs(x.x) < 3)
             .Subscribe(x => _playerMover.Move(x));
     }
 }

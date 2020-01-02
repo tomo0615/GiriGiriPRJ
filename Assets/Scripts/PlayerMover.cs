@@ -5,6 +5,8 @@ public class PlayerMover
 {
     private readonly Transform _transform;
 
+    private bool isMoving = false;
+    
     public PlayerMover(Transform transform)
     {
         _transform = transform;
@@ -12,8 +14,15 @@ public class PlayerMover
 
     public void Move(Vector3 direction)
     {
-        var endValue = _transform.position + direction;
-        //TODO:終わるまで呼ばれないようにする
-        _transform.DOMove(endValue, 0.1f);
+        if (isMoving) return;
+
+        isMoving = true;
+
+        _transform.DOMove(direction, 0.1f)
+            .OnComplete(() =>
+            {
+                isMoving = false;
+            });
+ 
     }
 }
