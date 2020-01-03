@@ -13,6 +13,4 @@ MonoBehaviour:
   m_Name: GameEffects
   m_EditorClassIdentifier: 
   gameEffectList:
-  - {fileID: -5472914812381669226, guid: 884a12f4803f2cd4b97a209374ae3fa7, type: 3}
-  - {fileID: -1962716444652400831, guid: af0495eb1c1b20e4cb339bcafaa28d40, type: 3}
-  - {fileID: 2066396308, guid: 6371fe370cc7c4a9799a5ea5afc2c836, type: 3}
+  - {fileID: -6253913136396739204, guid: 3d55784b45f5bf74898c1ffc1a6d383a, type: 3}

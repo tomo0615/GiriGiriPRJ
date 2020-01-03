@@ -42,7 +42,12 @@ public class PlayerController : MonoBehaviour,ITouchable
 
     public void Touch()
     {
-        //GameOverになる
+        _cameraController.ShakeCamera(10f);
+
+        GameEffectManager.Instance.OnGenelateEffect(transform.position, EffectType.DeadEffect);
+
+        Destroy(gameObject);
+
         Debug.Log("GameOver");
     }
 }
