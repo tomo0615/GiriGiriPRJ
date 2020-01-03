@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour,ITouchable
     [SerializeField]
     private GiriGiriCollider _collider = null;
 
+    [SerializeField]
+    private CameraController _cameraController = null;
+
     private void Awake()
     {
         _playerInputs = new PlayerInputs();
@@ -22,6 +25,7 @@ public class PlayerController : MonoBehaviour,ITouchable
         this.UpdateAsObservable()
             .Subscribe(_ => _playerInputs.Inputting());
 
+        //移動
         this.ObserveEveryValueChanged(_ => _playerInputs.MoveDirection())
             .Select(x => transform.position + _playerInputs.MoveDirection())
             .Where(x => Mathf.Abs(x.x) < 3)
@@ -29,7 +33,9 @@ public class PlayerController : MonoBehaviour,ITouchable
             {
                 _playerMover.Move(x);
 
-                _collider.enabled = true;
+                _cameraController.ShakeCamera(0.1f);
+
+                StartCoroutine(_collider.SwitchCollider());//ギリギリ判定を出す
             });
     }
 
