@@ -26,6 +26,7 @@ public class GiriGiriCollider : MonoBehaviour, ITouchable
     public void Touch()
     {
         //Playerのボーナスを加算
+        GameEffectManager.Instance.OnGenelateEffect(transform.position + Vector3.up/2, EffectType.GiriGiri);
         Debug.Log("Bonus!");
     }
 }
