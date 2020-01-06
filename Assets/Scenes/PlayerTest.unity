@@ -446,7 +446,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Level Up!
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
   m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
@@ -515,13 +515,13 @@ MonoBehaviour:
   m_margin: {x: -428.42822, y: -367.2241, z: -421.62784, w: -244.81615}
   m_textInfo:
     textComponent: {fileID: 379154731}
-    characterCount: 9
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -1726,6 +1726,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1582676444, guid: f57b30f08ab802f41a75106be11c400c, type: 3}
+      propertyPath: _scoreModel
+      value: 
+      objectReference: {fileID: 207333653}
     - target: {fileID: 6901394388582239612, guid: f57b30f08ab802f41a75106be11c400c,
         type: 3}
       propertyPath: m_Materials.Array.size
@@ -1775,9 +1779,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: GiriGiriCollider
       objectReference: {fileID: 0}
-    - target: {fileID: 1582676444, guid: f57b30f08ab802f41a75106be11c400c, type: 3}
-      propertyPath: _scoreModel
-      value: 
-      objectReference: {fileID: 207333653}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f57b30f08ab802f41a75106be11c400c, type: 3}

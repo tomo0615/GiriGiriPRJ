@@ -36,7 +36,7 @@ public class EnemyGenerator : MonoBehaviour
         InitializeEnemyList();
 
         StartCoroutine(GenerateCoroutine());
-
+        
         //10のクライを見て難易度上昇
         _scoreModel.scoreRP
             .Where(value => (value/10) == difficultLevel+1 && (value / 10) != 0)
@@ -45,6 +45,7 @@ public class EnemyGenerator : MonoBehaviour
                 coroutineWaitTime *= 0.9f;
                 difficultLevel++;
             });
+            
     }
 
     private void InitializeEnemyList()

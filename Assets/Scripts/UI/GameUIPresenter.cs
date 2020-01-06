@@ -46,6 +46,7 @@ private void Start()
 
         //LevelUpPresenter
         _levelUpModel.levelRP
+            .Where(value => value > 0)
             .Subscribe(_ =>
             {
                 StartCoroutine(_levelUpView.ViewLevelUp());

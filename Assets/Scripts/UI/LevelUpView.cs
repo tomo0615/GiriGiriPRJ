@@ -13,14 +13,14 @@ public class LevelUpView : MonoBehaviour
 
     public IEnumerator ViewLevelUp()
     {
-        int flashCount = 3;
+        int flashCount = 2;
 
         while(flashCount > 0)
         {
             levelUpText.text = "Level Up!";
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.25f);
             levelUpText.text = "";
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.25f);
             flashCount--;
         }
     }
