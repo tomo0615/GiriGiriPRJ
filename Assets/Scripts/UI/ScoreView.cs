@@ -25,7 +25,7 @@ public class ScoreView : MonoBehaviour
 
     private void Start()
     {
-        scoreText.text = 0.ToString();
+        scoreText.text = "".ToString();
     }
 
     public void ViewText(int value)

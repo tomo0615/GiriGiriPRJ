@@ -29,7 +29,7 @@ public class GiriGiriCollider : MonoBehaviour, ITouchable
     public void Touch()
     {
         //Playerのボーナスを加算
-        _scoreModel.scoreValue += 10;
+        _scoreModel.scoreValue += 5;
 
         GameEffectManager.Instance
             .OnGenelateEffect(transform.position + Vector3.up/2, EffectType.GiriGiri);

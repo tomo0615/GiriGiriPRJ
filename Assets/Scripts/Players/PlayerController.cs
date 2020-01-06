@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour,ITouchable
             {
                 _playerMover.Move(x);
 
-                _cameraController.ShakeCamera(0.1f);
+                //_cameraController.ShakeCamera(0.025f);
 
                 StartCoroutine(_collider.SwitchCollider());//ギリギリ判定を出す
             });
