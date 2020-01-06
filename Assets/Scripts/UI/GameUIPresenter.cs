@@ -21,13 +21,13 @@ public class GameUIPresenter : MonoBehaviour
 
     #region levelUp
     [SerializeField]
-    private EnemyGenerator _levelUpModel;
+    private EnemyGenerator _levelUpModel = null;
 
     [SerializeField]
-    private LevelUpView _levelUpView;
+    private LevelUpView _levelUpView = null;
     #endregion
 
-private void Start()
+    private void Start()
     {
         //StartPrezenter
         _startModel.startRP

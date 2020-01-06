@@ -8,6 +8,9 @@ public class StartView : MonoBehaviour
 
     private TextMeshProUGUI startText;
 
+    [SerializeField]
+    private HowToView _howToView = null;
+
     private void Awake()
     {
         _rectTransform = GetComponent<RectTransform>();
@@ -18,6 +21,8 @@ public class StartView : MonoBehaviour
     public void ViewStart()
     {
         startText.text = "READY";
+
+        StartCoroutine(_howToView.ViewHowTo());
 
         transform.DOScale(_rectTransform.localScale / 2f, 3)
             .OnComplete(() =>
