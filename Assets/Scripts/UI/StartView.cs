@@ -38,6 +38,8 @@ public class StartView : MonoBehaviour
                 });
             });
 
-        return Observable.Return(Unit.Default);
+        return Observable
+            .Timer(TimeSpan.FromSeconds(3.5f))
+            .ForEachAsync(_=> Debug.Log("GameStart"));
     }
 }
