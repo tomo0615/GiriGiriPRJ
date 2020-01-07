@@ -8,8 +8,6 @@ public enum GameState
 }
 public class GameStateManager : SingletonMonoBehaviour<GameStateManager>
 {
-    //private GameState currentGameState;
-
     [SerializeField]
     private StartModel _startModel = null; //StartState用
 
@@ -20,13 +18,6 @@ public class GameStateManager : SingletonMonoBehaviour<GameStateManager>
     private void Start()
     {
         SetGameState(GameState.Start);
-
-        _startModel.startRP
-            .Where(value => value == false)
-            .Subscribe(_ =>
-            {
-                StartCoroutine(_enemyGenerator.GenerateCoroutine());
-            });
     }
 
     public void SetGameState(GameState state)
@@ -45,12 +36,17 @@ public class GameStateManager : SingletonMonoBehaviour<GameStateManager>
     private void StartGame()
     {
         _startModel.isStart = true;
+
+        _startModel.startRP
+            .Where(value => value == false)
+            .Subscribe(_ =>
+            {
+                StartCoroutine(_enemyGenerator.GenerateCoroutine());
+            });
     }
 
     private void EndGame()
     {
-        StopAllCoroutines();
-
         //Resultの表示
     }
 }
