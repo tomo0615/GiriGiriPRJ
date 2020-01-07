@@ -13,6 +13,9 @@ public class StartView : MonoBehaviour
     [SerializeField]
     private HowToView _howToView = null;
 
+    [SerializeField]
+    private float waitTimeValue = 3.5f;
+
     private void Awake()
     {
         _rectTransform = GetComponent<RectTransform>();
@@ -26,12 +29,12 @@ public class StartView : MonoBehaviour
 
         StartCoroutine(_howToView.ViewHowTo());
 
-        transform.DOScale(_rectTransform.localScale / 2f, 3)
+        transform.DOScale(_rectTransform.localScale / 2f, waitTimeValue * 2/3)
             .OnComplete(() =>
             {
                 startText.text = "GO!";
 
-                transform.DOScale(_rectTransform.localScale * 4f, 0.5f)
+                transform.DOScale(_rectTransform.localScale * 4f,  waitTimeValue * 1/3)
                 .OnComplete(() => 
                 {
                     startText.text = "";
@@ -39,7 +42,7 @@ public class StartView : MonoBehaviour
             });
 
         return Observable
-            .Timer(TimeSpan.FromSeconds(3.5f))
+            .Timer(TimeSpan.FromSeconds(waitTimeValue))
             .ForEachAsync(_=> Debug.Log("GameStart"));
     }
 }
