@@ -48,6 +48,8 @@ public class PlayerController : MonoBehaviour,ITouchable
 
         Destroy(gameObject);
 
+        GameStateManager.Instance.SetGameState(GameState.End);
+
         Debug.Log("GameOver");
     }
 }

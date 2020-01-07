@@ -10,14 +10,4 @@ public class StartModel : MonoBehaviour
         get { return startRP.Value; }
         set { startRP.Value = value; }
     }
-    
-    /*テスト用
-    private void Update()
-    {
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            isStart = true;
-        }
-    }
-    */
 }

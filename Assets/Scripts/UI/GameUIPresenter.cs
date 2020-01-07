@@ -30,11 +30,12 @@ public class GameUIPresenter : MonoBehaviour
     private void Start()
     {
         //StartPrezenter
-        _startModel.startRP
+        _startModel.startRP 
             .Where(value => value == true)
-            .Subscribe(_ =>
+            .Subscribe(value =>
             {
-                _startView.ViewStart();
+                _startView.ViewStart()
+                .Subscribe(_ => _startModel.isStart = false);
             });
 
         //ScorePresenter

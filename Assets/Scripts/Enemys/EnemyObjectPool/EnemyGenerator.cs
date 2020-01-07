@@ -27,15 +27,15 @@ public class EnemyGenerator : MonoBehaviour
         get{ return levelRP.Value; }
         set{ levelRP.Value = value; }
     }
-
+    private void Awake()
+    {
+        _myTransform = GetComponent<Transform>();
+        InitializeEnemyList();
+    }
 
     void Start()
     {
-        _myTransform = GetComponent<Transform>();
-
-        InitializeEnemyList();
-
-        StartCoroutine(GenerateCoroutine());
+       //StartCoroutine(GenerateCoroutine());　テスト用
         
         //10のクライを見て難易度上昇
         _scoreModel.scoreRP
@@ -75,7 +75,7 @@ public class EnemyGenerator : MonoBehaviour
             });
     }
 
-    private IEnumerator GenerateCoroutine()
+    public IEnumerator GenerateCoroutine()
     {
         while (true)
         {

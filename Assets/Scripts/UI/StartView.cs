@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using DG.Tweening;
 using TMPro;
+using UniRx;
+using System;
 
 public class StartView : MonoBehaviour
 {
@@ -18,7 +20,7 @@ public class StartView : MonoBehaviour
         startText = GetComponent<TextMeshProUGUI>();
     }
 
-    public void ViewStart()
+    public IObservable<Unit> ViewStart()
     {
         startText.text = "READY";
 
@@ -30,7 +32,12 @@ public class StartView : MonoBehaviour
                 startText.text = "GO!";
 
                 transform.DOScale(_rectTransform.localScale * 4f, 0.5f)
-                .OnComplete(() => startText.text = "");
+                .OnComplete(() => 
+                {
+                    startText.text = "";
+                });
             });
+
+        return Observable.Return(Unit.Default);
     }
 }
