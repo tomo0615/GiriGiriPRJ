@@ -10,11 +10,6 @@ public class LoadSceneManager : SingletonMonoBehaviour<LoadSceneManager>
 {
     private string sceneName = "";
 
-    void Start()
-    {
-        DontDestroyOnLoad(this); //共通で使うため
-    }
-
     private void LoadGameScene()
     {
         SceneManager.LoadScene(sceneName);

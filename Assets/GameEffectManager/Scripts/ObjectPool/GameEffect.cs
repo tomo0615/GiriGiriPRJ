@@ -9,21 +9,11 @@ public class GameEffect : MonoBehaviour
 
     private ParticleSystem effect { get; set; }
 
-    private ParticleSystem[] effects { get; set; }
-
     private ParticleSystem Effect
     {
         get
         {
             return effect ?? (effect = GetComponent<ParticleSystem>());
-        }
-    }
-
-    private ParticleSystem[] Effects
-    {
-        get
-        {
-            return effects ?? (effects = GetComponentsInChildren<ParticleSystem>());
         }
     }
 

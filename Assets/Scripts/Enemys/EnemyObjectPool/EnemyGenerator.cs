@@ -52,7 +52,7 @@ public class EnemyGenerator : MonoBehaviour
         {
             _enemyPool.Add(i, new EnemyPool(_myTransform, _EnemyTable.enemyList[i])); ;
         }
-
+        
         //オブジェクトが破棄されたときにプールを破棄できるようにする
         foreach (var value in _enemyPool.Values)
         {

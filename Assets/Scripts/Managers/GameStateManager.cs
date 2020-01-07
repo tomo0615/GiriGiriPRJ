@@ -1,5 +1,6 @@
 ﻿using UniRx;
 using UnityEngine;
+using System.Collections;
 
 public enum GameState
 {
@@ -13,6 +14,9 @@ public class GameStateManager : SingletonMonoBehaviour<GameStateManager>
 
     [SerializeField]
     private EnemyGenerator _enemyGenerator = null;//StartState用
+
+    [SerializeField]
+    private ResultView _resultView = null;
 
     //ResultUIのコンポーネントを。。。
     private void Start()
@@ -28,7 +32,8 @@ public class GameStateManager : SingletonMonoBehaviour<GameStateManager>
                 StartGame();
                 break;
             case GameState.End:
-                EndGame();
+                StopAllCoroutines();
+                StartCoroutine(EndGame());
                 break;
         }
     }
@@ -45,8 +50,10 @@ public class GameStateManager : SingletonMonoBehaviour<GameStateManager>
             });
     }
 
-    private void EndGame()
+    private IEnumerator EndGame()
     {
-        //Resultの表示
+        yield return new WaitForSeconds(2f);
+
+        _resultView.ViewResult();
     }
 }
