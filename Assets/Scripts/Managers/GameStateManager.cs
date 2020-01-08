@@ -42,6 +42,8 @@ public class GameStateManager : SingletonMonoBehaviour<GameStateManager>
     {
         _startModel.isStart = true;
 
+        SoundManager.Instance.PlayBGM();
+
         _startModel.startRP
             .Where(value => value == false)
             .Subscribe(_ =>

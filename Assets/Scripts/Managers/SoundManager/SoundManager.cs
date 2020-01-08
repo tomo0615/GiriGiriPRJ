@@ -32,4 +32,9 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
     {
         _audioSource.PlayOneShot(soundList[type]);
     }
+
+    public void PlayBGM()
+    {
+        _audioSource.PlayOneShot(soundList[SoundType.BGM]);
+    }
 }

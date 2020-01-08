@@ -33,5 +33,7 @@ public class GiriGiriCollider : MonoBehaviour, ITouchable
 
         GameEffectManager.Instance
             .OnGenelateEffect(transform.position + Vector3.up/2, EffectType.GiriGiri);
+
+        SoundManager.Instance.PlaySoundOneShot(SoundType.girigiri);
     }
 }

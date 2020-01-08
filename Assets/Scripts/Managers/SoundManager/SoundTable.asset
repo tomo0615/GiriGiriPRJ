@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c5cdba46530e4f428ba74b63f23b066, type: 3}
   m_Name: SoundTable
   m_EditorClassIdentifier: 
-  audioClipList: []
+  audioClipList:
+  - {fileID: 8300000, guid: ba109689074af8a418b4e91409032e97, type: 3}
+  - {fileID: 8300000, guid: 1330f240851ba9949be5b7b32aaa5dd3, type: 3}
+  - {fileID: 8300000, guid: e9b21fe3803dea543899ac94a3882961, type: 3}
+  - {fileID: 8300000, guid: 28e3c51baf8567c488ed9158e4301f0d, type: 3}

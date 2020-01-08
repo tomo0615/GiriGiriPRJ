@@ -34,7 +34,7 @@ public class SoundTableCreator : Editor
             enumName: soundEnumName,            //enumの名前
             itemNameList: names,                //enumの項目
                                                 //作成したファイルのパスをAssetsから拡張子まで指定
-            exportPath: "Assets/Scripts/Managers/SoundManager" + soundEnumName + ".cs"
+            exportPath: "Assets/Scripts/Managers/SoundManager/" + soundEnumName + ".cs"
         );
     }
 }

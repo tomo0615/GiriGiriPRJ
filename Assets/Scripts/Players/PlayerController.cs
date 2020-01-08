@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour,ITouchable
             {
                 _playerMover.Move(x);
 
-                //_cameraController.ShakeCamera(0.025f);
+                SoundManager.Instance.PlaySoundOneShot(SoundType.move);
 
                 StartCoroutine(_collider.SwitchCollider());//ギリギリ判定を出す
             });
@@ -49,6 +49,8 @@ public class PlayerController : MonoBehaviour,ITouchable
         Destroy(gameObject);
 
         GameStateManager.Instance.SetGameState(GameState.End);
+
+        SoundManager.Instance.PlaySoundOneShot(SoundType.dead);
 
         Debug.Log("GameOver");
     }
