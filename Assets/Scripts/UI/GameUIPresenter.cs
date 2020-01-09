@@ -11,7 +11,6 @@ public class GameUIPresenter : MonoBehaviour
     #endregion
 
     #region start
-    [SerializeField]
     private StartModel _startModel = null;
 
     [SerializeField]
@@ -29,17 +28,19 @@ public class GameUIPresenter : MonoBehaviour
     private void Awake()
     {
         _scoreModel = new ScoreModel();
+
+        _startModel = new StartModel();
     }
 
     private void Start()
     {
         //StartPrezenter
-        _startModel.startRP 
+        _startModel.Starting
             .Where(value => value == true)
             .Subscribe(value =>
             {
                 _startView.ViewStart()
-                .Subscribe(_ => _startModel.isStart = false);
+                .Subscribe(_ => StartCoroutine(_levelUpModel.GenerateCoroutine()));
             });
 
         //ScorePresenter
@@ -55,6 +56,11 @@ public class GameUIPresenter : MonoBehaviour
             {
                 StartCoroutine(_levelUpView.ViewLevelUp());
             });
+    }
+
+    public void  OnChangeStartFlag(bool flag)
+    {
+        _startModel.SetStartFlag(flag);
     }
 
     public void OnChangeScore(int value)

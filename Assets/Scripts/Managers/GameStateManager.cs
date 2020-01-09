@@ -10,7 +10,7 @@ public enum GameState
 public class GameStateManager : SingletonMonoBehaviour<GameStateManager>
 {
     [SerializeField]
-    private StartModel _startModel = null; //StartState用
+    private GameUIPresenter _gameUIPresenter = null;
 
     [SerializeField]
     private EnemyGenerator _enemyGenerator = null;//StartState用
@@ -40,16 +40,9 @@ public class GameStateManager : SingletonMonoBehaviour<GameStateManager>
 
     private void StartGame()
     {
-        _startModel.isStart = true;
+        _gameUIPresenter.OnChangeStartFlag(true);
 
         SoundManager.Instance.PlayBGM();
-
-        _startModel.startRP
-            .Where(value => value == false)
-            .Subscribe(_ =>
-            {
-                StartCoroutine(_enemyGenerator.GenerateCoroutine());
-            });
     }
 
     private IEnumerator EndGame()

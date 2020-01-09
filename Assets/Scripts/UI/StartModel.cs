@@ -1,13 +1,16 @@
 ﻿using UniRx;
-using UnityEngine;
 
-public class StartModel : MonoBehaviour
+public class StartModel
 {
-    public BoolReactiveProperty startRP = new BoolReactiveProperty();
+    public ReactiveProperty<bool> _starting = new BoolReactiveProperty();
 
-    public bool isStart
+    public IReadOnlyReactiveProperty<bool> Starting
     {
-        get { return startRP.Value; }
-        set { startRP.Value = value; }
+        get { return _starting; }
+    }
+
+    public void SetStartFlag(bool flag)
+    {
+        _starting.Value = flag;
     }
 }
