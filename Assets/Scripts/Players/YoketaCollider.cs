@@ -2,7 +2,12 @@
 
 public class YoketaCollider : MonoBehaviour, ITouchable
 {
+    [SerializeField]
+    private GameUIPresenter _gameUIPresenter = null;
+
     private ScoreModel _scoreModel = null;
+
+    private const int NORMAL_SCORE = 1;
 
     private void Awake()
     {
@@ -11,6 +16,6 @@ public class YoketaCollider : MonoBehaviour, ITouchable
 
     public void Touch()
     {
-        _scoreModel.UpdateScoreValue(1);
+        _gameUIPresenter.OnChangeScore(NORMAL_SCORE);
     }
 }

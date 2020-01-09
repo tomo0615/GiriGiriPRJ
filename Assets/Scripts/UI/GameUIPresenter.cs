@@ -44,6 +44,7 @@ public class GameUIPresenter : MonoBehaviour
 
         //ScorePresenter
         _scoreModel.Scoring
+            .Where(value => value > 0)
             .Subscribe(_scoreView.ViewScoreText)
             .AddTo(gameObject);
 
@@ -54,5 +55,10 @@ public class GameUIPresenter : MonoBehaviour
             {
                 StartCoroutine(_levelUpView.ViewLevelUp());
             });
+    }
+
+    public void OnChangeScore(int value)
+    {
+        _scoreModel.UpdateScoreValue(value);
     }
 }
