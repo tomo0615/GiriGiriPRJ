@@ -1,13 +1,21 @@
 ﻿using UniRx;
-using UnityEngine;
 
-public class ScoreModel : MonoBehaviour
+public class ScoreModel
 {
-    public IntReactiveProperty scoreRP = new IntReactiveProperty();
+    private ReactiveProperty<int> _scoring = new ReactiveProperty<int>();
 
-    public int scoreValue 
+    public IReadOnlyReactiveProperty<int> Scoring
     {
-        get { return scoreRP.Value; }
-        set { scoreRP.Value = value; }
+        get { return _scoring; }
+    }
+
+    public ScoreModel()
+    {
+        _scoring = new ReactiveProperty<int>(0);
+    }
+
+    public void UpdateScoreValue(int value)
+    {
+        _scoring.Value += value;
     }
 }

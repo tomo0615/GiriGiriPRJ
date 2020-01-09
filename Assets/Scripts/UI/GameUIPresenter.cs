@@ -4,7 +4,6 @@ using UnityEngine;
 public class GameUIPresenter : MonoBehaviour
 {
     #region score
-    [SerializeField]
     private ScoreModel _scoreModel = null;
 
     [SerializeField]
@@ -27,6 +26,11 @@ public class GameUIPresenter : MonoBehaviour
     private LevelUpView _levelUpView = null;
     #endregion
 
+    private void Awake()
+    {
+        _scoreModel = new ScoreModel();
+    }
+
     private void Start()
     {
         //StartPrezenter
@@ -39,11 +43,9 @@ public class GameUIPresenter : MonoBehaviour
             });
 
         //ScorePresenter
-        _scoreModel.scoreRP
-            .Subscribe(value =>
-            {
-                _scoreView.ViewText(value);
-            });
+        _scoreModel.Scoring
+            .Subscribe(_scoreView.ViewScoreText)
+            .AddTo(gameObject);
 
         //LevelUpPresenter
         _levelUpModel.levelRP

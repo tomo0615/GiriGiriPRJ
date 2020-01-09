@@ -17,7 +17,6 @@ public class EnemyGenerator : MonoBehaviour
     [SerializeField]
     private float coroutineWaitTime = 2f;
 
-    [SerializeField]
     private ScoreModel _scoreModel = null;
 
     public IntReactiveProperty levelRP = new IntReactiveProperty();
@@ -27,16 +26,19 @@ public class EnemyGenerator : MonoBehaviour
         get{ return levelRP.Value; }
         set{ levelRP.Value = value; }
     }
+
     private void Awake()
     {
         _myTransform = GetComponent<Transform>();
         InitializeEnemyList();
+
+        _scoreModel = new ScoreModel();
     }
 
     void Start()
     {
         //10のクライを見て難易度上昇
-        _scoreModel.scoreRP
+        _scoreModel.Scoring
             .Where(value => (value/10) == difficultLevel+1 && (value / 10) != 0)
             .Subscribe(_ =>
             {

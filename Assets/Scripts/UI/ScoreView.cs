@@ -28,7 +28,7 @@ public class ScoreView : MonoBehaviour
         scoreText.text = "".ToString();
     }
 
-    public void ViewText(int value)
+    public void ViewScoreText(int value)
     {
         scoreText.text = value.ToString();
 
@@ -51,14 +51,4 @@ public class ScoreView : MonoBehaviour
                 });
             });
     }
-
-    /*テスト用
-    private void Update()
-    {
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            PunchText();
-        }
-    }
-    */
 }

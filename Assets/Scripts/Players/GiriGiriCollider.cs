@@ -4,12 +4,13 @@ public class GiriGiriCollider : MonoBehaviour, ITouchable
 {
     private Collider _collider;
 
-    [SerializeField]
     private ScoreModel _scoreModel = null;
 
     private void Awake()
     {
         _collider = GetComponent<Collider>();
+
+        _scoreModel = new ScoreModel();
     }
     private void Start()
     {
@@ -29,7 +30,7 @@ public class GiriGiriCollider : MonoBehaviour, ITouchable
     public void Touch()
     {
         //Playerのボーナスを加算
-        _scoreModel.scoreValue += 5;
+        _scoreModel.UpdateScoreValue(5);
 
         GameEffectManager.Instance
             .OnGenelateEffect(transform.position + Vector3.up/2, EffectType.GiriGiri);
