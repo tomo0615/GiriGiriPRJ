@@ -3,7 +3,7 @@ using System.Collections;
 public class GiriGiriCollider : MonoBehaviour, ITouchable
 { 
     [SerializeField]
-    private GameUIPresenter _gameUIPresenter = null;
+    private ScorePresenter _scorePresenter = null;
 
     private Collider _collider;
 
@@ -18,6 +18,7 @@ public class GiriGiriCollider : MonoBehaviour, ITouchable
         _collider.enabled = false;
     }
 
+    //Player移動時に呼び出し
     public IEnumerator SwitchCollider()
     {
         _collider.enabled = true;
@@ -30,11 +31,14 @@ public class GiriGiriCollider : MonoBehaviour, ITouchable
 
     public void Touch()
     {
-        _gameUIPresenter.OnChangeScore(BONUS_SCORE);
+        //スコア更新
+        _scorePresenter.OnChangeScore(BONUS_SCORE);
 
+        //Effect発生
         GameEffectManager.Instance
             .OnGenelateEffect(transform.position + Vector3.up/2, EffectType.GiriGiri);
 
+        //ぎりぎりの音を再生
         SoundManager.Instance.PlaySoundOneShot(SoundType.girigiri);
     }
 }

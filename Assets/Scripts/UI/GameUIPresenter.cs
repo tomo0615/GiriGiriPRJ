@@ -3,13 +3,6 @@ using UnityEngine;
 
 public class GameUIPresenter : MonoBehaviour
 {
-    #region score
-    private ScoreModel _scoreModel = null;
-
-    [SerializeField]
-    private ScoreView _scoreView = null;
-    #endregion
-
     #region start
     private StartModel _startModel = null;
 
@@ -27,8 +20,6 @@ public class GameUIPresenter : MonoBehaviour
 
     private void Awake()
     {
-        _scoreModel = new ScoreModel();
-
         _startModel = new StartModel();
     }
 
@@ -43,12 +34,6 @@ public class GameUIPresenter : MonoBehaviour
                 .Subscribe(_ => StartCoroutine(_levelUpModel.GenerateCoroutine()));
             });
 
-        //ScorePresenter
-        _scoreModel.Scoring
-            .Where(value => value > 0)
-            .Subscribe(_scoreView.ViewScoreText)
-            .AddTo(gameObject);
-
         //LevelUpPresenter
         _levelUpModel.levelRP
             .Where(value => value > 0)
@@ -61,10 +46,5 @@ public class GameUIPresenter : MonoBehaviour
     public void  OnChangeStartFlag(bool flag)
     {
         _startModel.SetStartFlag(flag);
-    }
-
-    public void OnChangeScore(int value)
-    {
-        _scoreModel.UpdateScoreValue(value);
     }
 }
