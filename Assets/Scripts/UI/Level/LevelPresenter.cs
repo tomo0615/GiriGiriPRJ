@@ -16,7 +16,7 @@ public class LevelPresenter : MonoBehaviour
     void Start()
     {
         _levelModel.Leveling
-            .Where(value => value > 0)
+            .Where(value => value > 1)
             .Subscribe(_ =>
             {
                 StartCoroutine(_levelView.ViewLevelUp());

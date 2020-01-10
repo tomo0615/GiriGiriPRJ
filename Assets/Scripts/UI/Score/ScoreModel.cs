@@ -2,7 +2,7 @@
 
 public class ScoreModel
 {
-    private ReactiveProperty<int> _scoring = new ReactiveProperty<int>();
+    private ReactiveProperty<int> _scoring;
 
     public IReadOnlyReactiveProperty<int> Scoring
     {
