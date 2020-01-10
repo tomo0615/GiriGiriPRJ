@@ -2,7 +2,7 @@
 using TMPro;
 using System.Collections;
 
-public class LevelUpView : MonoBehaviour
+public class LevelView : MonoBehaviour
 {
     private TextMeshProUGUI levelUpText;
 

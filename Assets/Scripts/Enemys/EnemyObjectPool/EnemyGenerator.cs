@@ -6,50 +6,29 @@ using System.Collections;
 
 public class EnemyGenerator : MonoBehaviour
 {
-    private Dictionary<int, EnemyPool> _enemyPool
-        = new Dictionary<int, EnemyPool>();
-
     [SerializeField]
     private EnemyTable _EnemyTable = null;
-
-    private Transform _myTransform;
 
     [SerializeField]
     private float coroutineWaitTime = 2f;
 
-    private ScoreModel _scoreModel = null;
+    [SerializeField]
+    private LevelPresenter _levelPresenter = null;
 
-    public IntReactiveProperty levelRP = new IntReactiveProperty();
+    private Transform _myTransform;
 
-    public int difficultLevel
-    {
-        get{ return levelRP.Value; }
-        set{ levelRP.Value = value; }
-    }
+    private Dictionary<int, EnemyPool> _enemyPool
+        = new Dictionary<int, EnemyPool>();
 
     private void Awake()
     {
         _myTransform = GetComponent<Transform>();
         InitializeEnemyList();
-
-        _scoreModel = new ScoreModel();
-    }
-
-    void Start()
-    {
-        //10のクライを見て難易度上昇
-        _scoreModel.Scoring
-            .Where(value => (value/10) == difficultLevel+1 && (value / 10) != 0)
-            .Subscribe(_ =>
-            {
-                coroutineWaitTime *= 0.9f;
-                difficultLevel++;
-            });
     }
 
     private void InitializeEnemyList()
     {
-        //ディクショナリに格納
+        //ディクショナリにEnemyのTableの情報を格納
         for (int i = 0; i < _EnemyTable.enemyList.Count; i++)
         {
             _enemyPool.Add(i, new EnemyPool(_myTransform, _EnemyTable.enemyList[i])); ;

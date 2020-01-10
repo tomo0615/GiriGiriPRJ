@@ -1,6 +1,6 @@
-﻿using UniRx;
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
+using UniRx;
 
 public enum GameState
 {
@@ -10,7 +10,7 @@ public enum GameState
 public class GameStateManager : SingletonMonoBehaviour<GameStateManager>
 {
     [SerializeField]
-    private GameUIPresenter _gameUIPresenter = null;
+    private StartView _startView = null;
 
     [SerializeField]
     private EnemyGenerator _enemyGenerator = null;//StartState用
@@ -40,9 +40,11 @@ public class GameStateManager : SingletonMonoBehaviour<GameStateManager>
 
     private void StartGame()
     {
-        _gameUIPresenter.OnChangeStartFlag(true);
-
         SoundManager.Instance.PlayBGM();
+
+        //Startカウント終了あとにEnemyの生成を開始
+        _startView.ViewStartSign()
+        .Subscribe(_ => StartCoroutine(_enemyGenerator.GenerateCoroutine()));
     }
 
     private IEnumerator EndGame()
