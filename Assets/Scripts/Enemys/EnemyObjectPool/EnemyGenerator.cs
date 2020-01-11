@@ -26,6 +26,11 @@ public class EnemyGenerator : MonoBehaviour
         InitializeEnemyList();
     }
 
+    private void Start()
+    {
+        _scorePresenter.Sco
+    }
+
     private void InitializeEnemyList()
     {
         //ディクショナリにEnemyのTableの情報を格納

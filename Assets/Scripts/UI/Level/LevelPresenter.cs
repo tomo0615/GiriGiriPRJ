@@ -27,7 +27,7 @@ public class LevelPresenter : MonoBehaviour
             .Subscribe(_ =>
             {
                 coroutineWaitTime *= 0.9f;
-                difficultLevel++;
+                OnChangeLevel(1);
             });
             */
     }
