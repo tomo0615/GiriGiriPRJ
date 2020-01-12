@@ -1,6 +1,6 @@
 ﻿using UniRx;
 
-public class LevelModel
+public class LevelModel : ILevelUpdatable
 {
     private ReactiveProperty<int> _leveling;
 
@@ -17,5 +17,10 @@ public class LevelModel
     public void UpdateLevelValue(int value)
     {
         _leveling.Value += value;
+    }
+
+    public void UpdateLevel()
+    {
+        throw new System.NotImplementedException();
     }
 }

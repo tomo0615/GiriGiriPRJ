@@ -8,6 +8,9 @@ public class LevelPresenter : MonoBehaviour
     [SerializeField]
     private LevelView _levelView = null;
 
+    [SerializeField]
+    private EnemyGenerator _enemyGenerator = null;
+
     private void Awake()
     {
         _levelModel = new LevelModel();
@@ -21,19 +24,11 @@ public class LevelPresenter : MonoBehaviour
             {
                 StartCoroutine(_levelView.ViewLevelUp());
             });
-        /*
-        _scoreModel.Scoring
-            .Where(value => (value / 10) == difficultLevel + 1 && (value / 10) != 0)
-            .Subscribe(_ =>
-            {
-                coroutineWaitTime *= 0.9f;
-                OnChangeLevel(1);
-            });
-            */
     }
 
     public void OnChangeLevel(int value)
     {
         _levelModel.UpdateLevelValue(value);
+        _enemyGenerator.OnUpGenerateInterval();
     }
 }

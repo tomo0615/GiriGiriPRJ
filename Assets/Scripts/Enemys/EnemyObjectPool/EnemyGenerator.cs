@@ -12,9 +12,6 @@ public class EnemyGenerator : MonoBehaviour
     [SerializeField]
     private float coroutineWaitTime = 2f;
 
-    [SerializeField]
-    private LevelPresenter _levelPresenter = null;
-
     private Transform _myTransform;
 
     private Dictionary<int, EnemyPool> _enemyPool
@@ -24,11 +21,6 @@ public class EnemyGenerator : MonoBehaviour
     {
         _myTransform = GetComponent<Transform>();
         InitializeEnemyList();
-    }
-
-    private void Start()
-    {
-        _scorePresenter.Sco
     }
 
     private void InitializeEnemyList()
@@ -67,5 +59,10 @@ public class EnemyGenerator : MonoBehaviour
 
             yield return new WaitForSeconds(coroutineWaitTime);
         }
+    }
+
+    public void OnUpGenerateInterval()
+    {
+        coroutineWaitTime *= 0.9f;
     }
 }
