@@ -14,13 +14,8 @@ public class LevelModel : ILevelUpdatable
         _leveling = new ReactiveProperty<int>(1);
     }
 
-    public void UpdateLevelValue(int value)
+    public void UpdateLevel(int value)
     {
         _leveling.Value += value;
-    }
-
-    public void UpdateLevel()
-    {
-        throw new System.NotImplementedException();
     }
 }

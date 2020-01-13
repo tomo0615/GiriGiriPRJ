@@ -140,7 +140,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _EnemyTable: {fileID: 11400000, guid: 75d6829f97056b5429609a03ee33385d, type: 2}
   coroutineWaitTime: 2
-  _levelPresenter: {fileID: 0}
 --- !u!114 &380380703 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9046134559964232425, guid: 0edb94acabab53542962228e5bb727bb,
@@ -833,8 +832,25 @@ PrefabInstance:
       propertyPath: _levelView
       value: 
       objectReference: {fileID: 6932670815069629607}
+    - target: {fileID: 4762043439903624094, guid: 6f8259a840beb62429c5babdf397c613,
+        type: 3}
+      propertyPath: _enemyGenerator
+      value: 
+      objectReference: {fileID: 159856922}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f8259a840beb62429c5babdf397c613, type: 3}
+--- !u!114 &4762043440049519006 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4762043439903624094, guid: 6f8259a840beb62429c5babdf397c613,
+    type: 3}
+  m_PrefabInstance: {fileID: 4762043440049519005}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25e02a9a52de34f4a83b52d4b88e9be0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5084904634788993522
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1383,6 +1399,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScorePresenter
       objectReference: {fileID: 0}
+    - target: {fileID: 9046134559964232425, guid: 0edb94acabab53542962228e5bb727bb,
+        type: 3}
+      propertyPath: _scoreView
+      value: 
+      objectReference: {fileID: 1311859762}
+    - target: {fileID: 9046134559964232425, guid: 0edb94acabab53542962228e5bb727bb,
+        type: 3}
+      propertyPath: _levelPresenter
+      value: 
+      objectReference: {fileID: 4762043440049519006}
     - target: {fileID: 9046134559964232406, guid: 0edb94acabab53542962228e5bb727bb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1438,10 +1464,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9046134559964232425, guid: 0edb94acabab53542962228e5bb727bb,
-        type: 3}
-      propertyPath: _scoreView
-      value: 
-      objectReference: {fileID: 1311859762}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0edb94acabab53542962228e5bb727bb, type: 3}

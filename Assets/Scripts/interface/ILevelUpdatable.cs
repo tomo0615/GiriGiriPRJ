@@ -1,4 +1,4 @@
 ﻿public interface ILevelUpdatable
 {
-    void UpdateLevel();
+    void UpdateLevel(int value);
 }

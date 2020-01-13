@@ -28,7 +28,13 @@ public class LevelPresenter : MonoBehaviour
 
     public void OnChangeLevel(int value)
     {
-        _levelModel.UpdateLevelValue(value);
+        _levelModel.UpdateLevel(value);
+
         _enemyGenerator.OnUpGenerateInterval();
+    }
+
+    public int GetCurrentLevel()
+    {
+        return _levelModel.Leveling.Value;
     }
 }
