@@ -2,7 +2,7 @@
 using UniRx;
 using UniRx.Triggers;
 
-public class PlayerController : MonoBehaviour,ITouchable
+public class PlayerController : MonoBehaviour,IPlayerCollider
 {
     private IPlayerInputs _playerInputs;
     private PlayerMover _playerMover;
@@ -39,8 +39,7 @@ public class PlayerController : MonoBehaviour,ITouchable
             });
     }
 
-
-    public void Touch()
+    public void Collided()
     {
         _cameraController.ShakeCamera(10f);
 

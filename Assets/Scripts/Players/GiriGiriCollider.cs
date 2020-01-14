@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-public class GiriGiriCollider : MonoBehaviour, ITouchable
+public class GiriGiriCollider : MonoBehaviour, IPlayerCollider
 { 
     [SerializeField]
     private ScorePresenter _scorePresenter = null;
@@ -28,15 +28,14 @@ public class GiriGiriCollider : MonoBehaviour, ITouchable
         _collider.enabled = false;
     }
 
-
-    public void Touch()
+    public void Collided()
     {
         //スコア更新
         _scorePresenter.OnChangeScore(BONUS_SCORE);
 
         //Effect発生
         GameEffectManager.Instance
-            .OnGenelateEffect(transform.position + Vector3.up/2, EffectType.GiriGiri);
+            .OnGenelateEffect(transform.position + Vector3.up / 2, EffectType.GiriGiri);
 
         //ぎりぎりの音を再生
         SoundManager.Instance.PlaySoundOneShot(SoundType.girigiri);

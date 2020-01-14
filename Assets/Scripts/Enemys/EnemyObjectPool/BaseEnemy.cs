@@ -30,11 +30,11 @@ public abstract class BaseEnemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        var touchable = other.GetComponent<ITouchable>();
+        var collider = other.GetComponent<IPlayerCollider>();
 
-        if (touchable != null)
+        if (collider != null)
         {
-            touchable.Touch();
+            collider.Collided();
         }
     }
 }
