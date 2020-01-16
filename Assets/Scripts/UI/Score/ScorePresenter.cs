@@ -1,7 +1,7 @@
 ﻿using UniRx;
 using UnityEngine;
 
-public class ScorePresenter : MonoBehaviour
+public class ScorePresenter : MonoBehaviour ,IScoreUpdatable
 {
     private ScoreModel _scoreModel = null;
 
