@@ -4,7 +4,7 @@ using UniRx.Triggers;
 
 public class PlayerController : MonoBehaviour,IPlayerCollider
 {
-    private IPlayerInputs _playerInputs;
+    private IPlayerInput _playerInput;
     private PlayerMover _playerMover;
 
     [SerializeField]
@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour,IPlayerCollider
 
     private void Awake()
     {
-        _playerInputs = new PlayerInputs();
+        _playerInput = new PlayerPCInput();
         _playerMover = new PlayerMover(this.transform);
     }
 
@@ -23,11 +23,11 @@ public class PlayerController : MonoBehaviour,IPlayerCollider
     {
         //入力受付
         this.UpdateAsObservable()
-            .Subscribe(_ => _playerInputs.Inputting());
+            .Subscribe(_ => _playerInput.Inputting());
 
         //移動
-        this.ObserveEveryValueChanged(_ => _playerInputs.MoveDirection())
-            .Select(x => transform.position + _playerInputs.MoveDirection())
+        this.ObserveEveryValueChanged(_ => _playerInput.MoveDirection())
+            .Select(x => transform.position + _playerInput.MoveDirection())
             .Where(x => Mathf.Abs(x.x) < 3)
             .Subscribe(x =>
             {

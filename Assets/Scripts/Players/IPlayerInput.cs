@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public interface IPlayerInputs 
+public interface IPlayerInput
 {
     void Inputting();
 

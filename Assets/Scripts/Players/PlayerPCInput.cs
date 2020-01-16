@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PlayerInputs : IPlayerInputs
+public class PlayerPCInput : IPlayerInput
 {
     private float _horizontal;
 
