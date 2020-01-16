@@ -36,4 +36,9 @@ public class ScorePresenter : MonoBehaviour ,IScoreUpdatable
     {
         _scoreModel.UpdateScoreValue(value);
     }
+    
+    public int GetScoreValue()
+    {
+        return _scoreModel.Scoring.Value;
+    }
 }
