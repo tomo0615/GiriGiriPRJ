@@ -417,7 +417,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6932670815069629604}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1105337582
+--- !u!114 &1105337586
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -478,18 +478,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1198303367 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114953441282407030, guid: ee393f04960d94baeaf854699b2ae1e3,
-    type: 3}
-  m_PrefabInstance: {fileID: 1226117089}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ee1ffff0e8554589a962f4749a0222f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1226117089
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1446,7 +1434,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 945672346, guid: e0a588f287d9b3b47aaaf58d5584b7a6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 945672346, guid: e0a588f287d9b3b47aaaf58d5584b7a6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -1455,10 +1443,10 @@ PrefabInstance:
     - target: {fileID: 945672346, guid: e0a588f287d9b3b47aaaf58d5584b7a6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1198303367}
+      objectReference: {fileID: 1105337586}
     - target: {fileID: 945672346, guid: e0a588f287d9b3b47aaaf58d5584b7a6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SendMessageUpwards
+      value: OnClickRankingButton
       objectReference: {fileID: 0}
     - target: {fileID: 945672346, guid: e0a588f287d9b3b47aaaf58d5584b7a6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName

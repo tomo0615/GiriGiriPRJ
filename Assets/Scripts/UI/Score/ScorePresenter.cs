@@ -25,7 +25,7 @@ public class ScorePresenter : MonoBehaviour ,IScoreUpdatable
 
         //スコア参照して10の位の変化を購読
         _scoreModel.Scoring
-            .Where(value => (value / 10) == _levelPresenter.GetCurrentLevel() + 1)
+            .Where(value => (value / 10) == _levelPresenter.GetCurrentLevel())
             .Subscribe(_ =>
             { 
                 _levelPresenter.OnChangeLevel(1);
