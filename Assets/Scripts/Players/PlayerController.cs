@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour,IPlayerCollider
 
         //移動
         this.ObserveEveryValueChanged(_ => _playerInput.MoveDirection())
-            .Select(x => transform.position + _playerInput.MoveDirection())
+            .Select(x => transform.position + x)
             .Where(x => Mathf.Abs(x.x) < 3)
             .Subscribe(x =>
             {

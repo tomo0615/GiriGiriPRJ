@@ -10,5 +10,5 @@ public class PlayerPCInput : IPlayerInput
     }
 
     public Vector3 MoveDirection() =>
-        new Vector3(_horizontal*2, 0);
+        new Vector3((int)_horizontal *2, 0);
 }
