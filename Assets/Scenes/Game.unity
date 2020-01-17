@@ -1590,6 +1590,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 510684812, guid: e0a588f287d9b3b47aaaf58d5584b7a6, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 510684812, guid: e0a588f287d9b3b47aaaf58d5584b7a6, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 510684812, guid: e0a588f287d9b3b47aaaf58d5584b7a6, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 945672347, guid: e0a588f287d9b3b47aaaf58d5584b7a6, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 945672347, guid: e0a588f287d9b3b47aaaf58d5584b7a6, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 945672347, guid: e0a588f287d9b3b47aaaf58d5584b7a6, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0a588f287d9b3b47aaaf58d5584b7a6, type: 3}
 --- !u!114 &6932670815069629607 stripped
