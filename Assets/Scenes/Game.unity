@@ -120,6 +120,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &63191219 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1582676444, guid: f57b30f08ab802f41a75106be11c400c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6901394388918610987}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4216a551c1b63d4d92a6579dfcf39aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &159856921 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5084904634646192363, guid: c7444cf6b622147449ba4a8ec449b73e,
@@ -235,64 +247,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &743647096
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 743647099}
-  - component: {fileID: 743647098}
-  - component: {fileID: 743647097}
-  m_Layer: 0
-  m_Name: YoketaCollider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &743647097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 743647096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8b1c4a4acda733409976fd40f74b47b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _scorePresenter: {fileID: 380380703}
---- !u!65 &743647098
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 743647096}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &743647099
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 743647096}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -6, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1087345794
 GameObject:
@@ -605,6 +559,81 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f03aa7be12faed4ba7e9990c3f77491, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1482377887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1482377890}
+  - component: {fileID: 1482377889}
+  - component: {fileID: 1482377888}
+  - component: {fileID: 1482377891}
+  m_Layer: 0
+  m_Name: YoketaCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1482377888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482377887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8b1c4a4acda733409976fd40f74b47b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scorePresenter: {fileID: 380380703}
+--- !u!65 &1482377889
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482377887}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1482377890
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482377887}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1482377891
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482377887}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!114 &1562969943 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1562969943, guid: e0a588f287d9b3b47aaaf58d5584b7a6,
@@ -1475,9 +1504,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1582676444, guid: f57b30f08ab802f41a75106be11c400c, type: 3}
-      propertyPath: _gameUIPresenter
-      value: 
+    - target: {fileID: 6901394388582239602, guid: f57b30f08ab802f41a75106be11c400c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1582676444, guid: f57b30f08ab802f41a75106be11c400c, type: 3}
       propertyPath: _scorePresenter
@@ -1488,11 +1518,18 @@ PrefabInstance:
       propertyPath: _cameraController
       value: 
       objectReference: {fileID: 1087345798}
-    - target: {fileID: 1879141845, guid: f57b30f08ab802f41a75106be11c400c, type: 3}
-      propertyPath: _gameUIPresenter
+    - target: {fileID: 6901394388582239601, guid: f57b30f08ab802f41a75106be11c400c,
+        type: 3}
+      propertyPath: _giriGiriCollider
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1879141845, guid: f57b30f08ab802f41a75106be11c400c, type: 3}
+      objectReference: {fileID: 63191219}
+    - target: {fileID: 6901394388582239601, guid: f57b30f08ab802f41a75106be11c400c,
+        type: 3}
+      propertyPath: _yoketaCollider
+      value: 
+      objectReference: {fileID: 1482377888}
+    - target: {fileID: 5837169643672912598, guid: f57b30f08ab802f41a75106be11c400c,
+        type: 3}
       propertyPath: _scorePresenter
       value: 
       objectReference: {fileID: 380380703}

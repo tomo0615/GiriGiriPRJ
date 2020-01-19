@@ -165,7 +165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091dd9021fd848c42be269e5095e63da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _collider: {fileID: 1582676444}
+  _giriGiriCollider: {fileID: 0}
+  _yoketaCollider: {fileID: 0}
   _cameraController: {fileID: 0}
 --- !u!54 &873439574
 Rigidbody:
