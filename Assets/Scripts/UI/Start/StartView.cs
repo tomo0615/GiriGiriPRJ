@@ -34,10 +34,10 @@ public class StartView : MonoBehaviour
             {
                 startSignText.text = "GO!";
 
-                transform.DOScale(_rectTransform.localScale * 5f, StartSignTimeValue * 0.1f)
-                .OnComplete(() => 
+                transform.DOScale(_rectTransform.localScale * 10f, StartSignTimeValue * 0.1f)
+                .OnUpdate(() =>
                 {
-                    startSignText.text = "";
+                    startSignText.color -= new Color(0, 0, 0, 0.1f);
                 });
             });
 
