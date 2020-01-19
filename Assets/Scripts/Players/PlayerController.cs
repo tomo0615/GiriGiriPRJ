@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour,IPlayerCollider
 {
     private IPlayerInput _playerInput;
     private PlayerMover _playerMover;
+    private PlayerAnimator _playerAnimator;
 
     [SerializeField]
     private GiriGiriCollider _collider = null;
@@ -17,6 +18,7 @@ public class PlayerController : MonoBehaviour,IPlayerCollider
     {
         _playerInput = new PlayerPCInput();
         _playerMover = new PlayerMover(this.transform);
+        _playerAnimator = new PlayerAnimator(this.transform);
     }
 
     private void Start()
@@ -34,6 +36,8 @@ public class PlayerController : MonoBehaviour,IPlayerCollider
                 _playerMover.Move(x);
 
                 SoundManager.Instance.PlaySoundOneShot(SoundType.move);
+
+                _playerAnimator.DOMoveAnimation();
 
                 StartCoroutine(_collider.SwitchCollider());//ギリギリ判定を出す
             });
