@@ -12,4 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e7c049bf6c24984784d1536398e878c, type: 3}
   m_Name: PraiseWords
   m_EditorClassIdentifier: 
-  praiseList: []
+  praiseList:
+  - Great!
+  - Excellent!
+  - Amazing!
+  - Marvelous!
+  - Wonderful!
+  - Funtastic!
+  - Congratulations!
+  - Fabulous!
+  - Awesome!
+  - Cool!
