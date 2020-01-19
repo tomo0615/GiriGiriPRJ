@@ -16,7 +16,7 @@ public class StartView : MonoBehaviour
     private TextMeshProUGUI howToText = null;
 
     [SerializeField]
-    private float StartSignTimeValue = 3.5f;
+    private float StartSignTimeValue = 3.0f;
 
     private void Awake()
     {
@@ -34,7 +34,7 @@ public class StartView : MonoBehaviour
             {
                 startSignText.text = "GO!";
 
-                transform.DOScale(_rectTransform.localScale * 4f, StartSignTimeValue * 1/3)
+                transform.DOScale(_rectTransform.localScale * 5f, StartSignTimeValue * 0.1f)
                 .OnComplete(() => 
                 {
                     startSignText.text = "";
