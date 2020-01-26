@@ -5,6 +5,9 @@ public class GiriGiriCollider : MonoBehaviour, IPlayerCollider
     [SerializeField]
     private ScorePresenter _scorePresenter = null;
 
+    [SerializeField]
+    private PraisePresenter _praisePresenter = null;
+
     private Collider _collider;
 
     private const int BONUS_SCORE = 5;
@@ -32,6 +35,9 @@ public class GiriGiriCollider : MonoBehaviour, IPlayerCollider
     {
         //スコア更新
         _scorePresenter.OnChangeScore(BONUS_SCORE);
+
+        //Praiseを表示
+        _praisePresenter.OnPraisePlayer();
 
         //Effect発生
         GameEffectManager.Instance
