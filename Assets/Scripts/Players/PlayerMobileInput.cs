@@ -2,35 +2,29 @@
 
 public class PlayerMobileInput : IPlayerInput
 {
-    private Vector3 touchStartPos;
-    private Vector3 touchEndPos;
+    private Vector3 touchStartPosition;
+    private Vector3 touchEndPosition;
 
-    private Vector3 moveDirection = Vector3.zero;
+    private float directionX;
 
     public void Inputting()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            touchStartPos = new Vector3(Input.mousePosition.x, 0);
+            touchStartPosition = new Vector3(Input.mousePosition.x, 0);
         }
-
-        if (Input.GetKeyUp(KeyCode.Mouse0))
+        else if (Input.GetKeyUp(KeyCode.Mouse0))
         {
-            touchEndPos = new Vector3(Input.mousePosition.x, 0);
-           
-            GetDirection();
+            touchEndPosition = new Vector3(Input.mousePosition.x, 0);
+
+            directionX = touchEndPosition.x - touchStartPosition.x;
+        }
+        else
+        {
+            directionX = 0;
         }
     }
 
     public Vector3 MoveDirection()
-        => moveDirection;
-
-    private Vector3 GetDirection()
-    {
-        float directionX = touchEndPos.x - touchStartPos.x;
-
-        moveDirection = new Vector3(directionX, 0).normalized * 2;
-
-        return moveDirection;
-    }
+        => new Vector3(directionX, 0).normalized * 2;
 }
