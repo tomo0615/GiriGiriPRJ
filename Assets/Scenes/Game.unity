@@ -1077,7 +1077,7 @@ PrefabInstance:
     - target: {fileID: 5084904634646192363, guid: c7444cf6b622147449ba4a8ec449b73e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5084904634646192360, guid: c7444cf6b622147449ba4a8ec449b73e,
         type: 3}
@@ -1311,6 +1311,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1582676444, guid: f57b30f08ab802f41a75106be11c400c, type: 3}
+      propertyPath: _scorePresenter
+      value: 
+      objectReference: {fileID: 380380703}
     - target: {fileID: 6901394388582239602, guid: f57b30f08ab802f41a75106be11c400c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1371,10 +1375,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1582676444, guid: f57b30f08ab802f41a75106be11c400c, type: 3}
-      propertyPath: _scorePresenter
-      value: 
-      objectReference: {fileID: 380380703}
     - target: {fileID: 6901394388582239601, guid: f57b30f08ab802f41a75106be11c400c,
         type: 3}
       propertyPath: _cameraController
@@ -1390,6 +1390,11 @@ PrefabInstance:
       propertyPath: _yoketaCollider
       value: 
       objectReference: {fileID: 1482377888}
+    - target: {fileID: 6901394388582239601, guid: f57b30f08ab802f41a75106be11c400c,
+        type: 3}
+      propertyPath: inputType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5837169643672912598, guid: f57b30f08ab802f41a75106be11c400c,
         type: 3}
       propertyPath: _scorePresenter

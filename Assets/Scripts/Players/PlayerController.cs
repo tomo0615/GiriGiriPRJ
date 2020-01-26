@@ -2,11 +2,20 @@
 using UniRx;
 using UniRx.Triggers;
 
+public enum InputType
+{
+    PC,
+    Mobile
+}
+
 public class PlayerController : MonoBehaviour,IPlayerCollider
 {
     private IPlayerInput _playerInput;
     private PlayerMover _playerMover;
     private PlayerAnimator _playerAnimator;
+
+    [SerializeField]
+    private InputType inputType;
 
     [SerializeField]
     private GiriGiriCollider _giriGiriCollider = null;
@@ -19,7 +28,15 @@ public class PlayerController : MonoBehaviour,IPlayerCollider
 
     private void Awake()
     {
-        _playerInput = new PlayerPCInput();
+        if(inputType == InputType.PC)
+        {
+            _playerInput = new PlayerPCInput();
+        }
+        else if(inputType == InputType.Mobile)
+        {
+            _playerInput = new PlayerMobileInput();
+        }
+
         _playerMover = new PlayerMover(this.transform);
         _playerAnimator = new PlayerAnimator(this.transform);
     }
