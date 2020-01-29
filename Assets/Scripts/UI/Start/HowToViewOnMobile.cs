@@ -1,14 +1,14 @@
 ﻿using System.Collections;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
-public class HowToView : MonoBehaviour
+public class HowToViewOnMobile : MonoBehaviour , IHowToView
 {
-    private TextMeshProUGUI howToText;
+    private Image howToImage;
 
     private void Awake()
     {
-        howToText = GetComponent<TextMeshProUGUI>();
+        howToImage = GetComponent<Image>();
     }
 
     public IEnumerator ViewHowTo()
@@ -17,9 +17,9 @@ public class HowToView : MonoBehaviour
 
         while (flashCount > 0)
         {
-            howToText.text = "< Dodge! >";
+            howToImage.enabled = true;
             yield return new WaitForSeconds(0.5f);
-            howToText.text = "";
+            howToImage.enabled = false;
             yield return new WaitForSeconds(0.5f);
             flashCount--;
         }

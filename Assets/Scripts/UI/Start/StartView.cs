@@ -3,9 +3,8 @@ using DG.Tweening;
 using TMPro;
 using UniRx;
 using System;
-using System.Collections;
 
-public class StartView : MonoBehaviour
+public class StartView : MonoBehaviour 
 {
     private RectTransform _rectTransform;
 
@@ -13,10 +12,16 @@ public class StartView : MonoBehaviour
     private TextMeshProUGUI startSignText = null;
 
     [SerializeField]
-    private TextMeshProUGUI howToText = null;
+    private HowToViewOnMobile _howToOnMobile = null;
+
+    [SerializeField]
+    private HowToViewOnPC _howToOnPC = null;
 
     [SerializeField]
     private float StartSignTimeValue = 3.0f;
+
+    [SerializeField]
+    private InputType playerInputType = InputType.PC;
 
     private void Awake()
     {
@@ -26,8 +31,17 @@ public class StartView : MonoBehaviour
     public IObservable<Unit> ViewStartSign()
     {
         startSignText.text = "READY";
-        
-        StartCoroutine(ViewHowTo());
+
+
+        //TODO:関数化する
+        if (playerInputType == InputType.PC)
+        {
+            StartCoroutine(_howToOnPC.ViewHowTo());
+        }
+        else if(playerInputType == InputType.Mobile)
+        {
+            StartCoroutine(_howToOnMobile.ViewHowTo());
+        }
 
         transform.DOScale(_rectTransform.localScale / 2f, StartSignTimeValue * 2/3)
             .OnComplete(() =>
@@ -44,19 +58,5 @@ public class StartView : MonoBehaviour
         return Observable
             .Timer(TimeSpan.FromSeconds(StartSignTimeValue))
             .ForEachAsync(_=> Debug.Log("GameStart"));
-    }
-
-    public IEnumerator ViewHowTo()
-    {
-        int flashCount = 3;
-
-        while (flashCount > 0)
-        {
-            howToText.text = "< Dodge! >";
-            yield return new WaitForSeconds(0.5f);
-            howToText.text = "";
-            yield return new WaitForSeconds(0.5f);
-            flashCount--;
-        }
     }
 }
