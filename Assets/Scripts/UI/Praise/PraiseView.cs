@@ -28,6 +28,8 @@ public class PraiseView : MonoBehaviour
         praiseText.text = word;
         
         PunchText();
+
+        RotateRandomText();
     }
 
     private void PunchText()
@@ -38,14 +40,18 @@ public class PraiseView : MonoBehaviour
 
         transform.DOScale(_rectTransform.localScale * punchScale, punchTime / 2)
             .OnComplete(() =>
-            {
-                transform.DOScale(_rectTransform.localScale / punchScale, punchTime / 2)
-                .OnComplete(() =>
-                {
-                    isPunch = false;
+            {  
+                isPunch = false;
+                praiseText.text = "";
 
-                    praiseText.text = "";
-                });
+                _rectTransform.localScale /= punchScale;
             });
+    }
+
+    private void RotateRandomText()
+    {
+        float randomAngle = Random.Range(20f, -20f);
+
+        _rectTransform.rotation = Quaternion.Euler(0, 0, randomAngle);
     }
 }
