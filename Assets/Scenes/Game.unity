@@ -1513,7 +1513,7 @@ PrefabInstance:
     - target: {fileID: 6901394388582239601, guid: f57b30f08ab802f41a75106be11c400c,
         type: 3}
       propertyPath: inputType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5837169643672912598, guid: f57b30f08ab802f41a75106be11c400c,
         type: 3}
@@ -1544,7 +1544,7 @@ PrefabInstance:
       objectReference: {fileID: 629733767}
     - target: {fileID: 1562969943, guid: e0a588f287d9b3b47aaaf58d5584b7a6, type: 3}
       propertyPath: playerInputType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6932670815170551390, guid: e0a588f287d9b3b47aaaf58d5584b7a6,
         type: 3}
@@ -1689,6 +1689,10 @@ PrefabInstance:
     - target: {fileID: 1845897304, guid: e0a588f287d9b3b47aaaf58d5584b7a6, type: 3}
       propertyPath: m_Color.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845897304, guid: e0a588f287d9b3b47aaaf58d5584b7a6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 922910066, guid: e0a588f287d9b3b47aaaf58d5584b7a6, type: 3}
       propertyPath: m_AnchoredPosition.y

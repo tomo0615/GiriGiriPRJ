@@ -470,6 +470,18 @@ PrefabInstance:
       propertyPath: punchDuration
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1105148997, guid: b6e33f7de41b1c34ba966d4f1f35f4d4, type: 3}
+      propertyPath: m_text
+      value: v1.1.0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1105148997, guid: b6e33f7de41b1c34ba966d4f1f35f4d4, type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1105148997, guid: b6e33f7de41b1c34ba966d4f1f35f4d4, type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6e33f7de41b1c34ba966d4f1f35f4d4, type: 3}
 --- !u!1 &1733807058
