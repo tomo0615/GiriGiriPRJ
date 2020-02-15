@@ -2,7 +2,7 @@
 using UniRx;
 using UnityEngine.UI;
 
-public abstract class NewBehaviourScript : MonoBehaviour
+public abstract class BaseButton : MonoBehaviour
 {
     private Button _button;
 
