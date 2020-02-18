@@ -2890,59 +2890,7 @@ PrefabInstance:
       propertyPath: displayWindow
       value: 
       objectReference: {fileID: 1059630186}
-    - target: {fileID: 1105148996, guid: b6e33f7de41b1c34ba966d4f1f35f4d4, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 473.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 1105148996, guid: b6e33f7de41b1c34ba966d4f1f35f4d4, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 133.93
-      objectReference: {fileID: 0}
-    - target: {fileID: 1105148996, guid: b6e33f7de41b1c34ba966d4f1f35f4d4, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -923.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 1105148996, guid: b6e33f7de41b1c34ba966d4f1f35f4d4, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 72.73
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268254140, guid: b6e33f7de41b1c34ba966d4f1f35f4d4, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -300
-      objectReference: {fileID: 0}
-    - target: {fileID: 339632133, guid: b6e33f7de41b1c34ba966d4f1f35f4d4, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -100
-      objectReference: {fileID: 0}
-    - target: {fileID: 1049061567, guid: b6e33f7de41b1c34ba966d4f1f35f4d4, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 1019800406, guid: b6e33f7de41b1c34ba966d4f1f35f4d4, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 1105148997, guid: b6e33f7de41b1c34ba966d4f1f35f4d4, type: 3}
-      propertyPath: m_textAlignment
-      value: 1028
-      objectReference: {fileID: 0}
-    - target: {fileID: 1105148997, guid: b6e33f7de41b1c34ba966d4f1f35f4d4, type: 3}
-      propertyPath: m_fontSize
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 1105148997, guid: b6e33f7de41b1c34ba966d4f1f35f4d4, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 1105148997, guid: b6e33f7de41b1c34ba966d4f1f35f4d4, type: 3}
-      propertyPath: m_firstOverflowCharacterIndex
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 339632134, guid: b6e33f7de41b1c34ba966d4f1f35f4d4, type: 3}
-    - {fileID: 1019800407, guid: b6e33f7de41b1c34ba966d4f1f35f4d4, type: 3}
-    - {fileID: 1049061568, guid: b6e33f7de41b1c34ba966d4f1f35f4d4, type: 3}
-    - {fileID: 1084013893, guid: b6e33f7de41b1c34ba966d4f1f35f4d4, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6e33f7de41b1c34ba966d4f1f35f4d4, type: 3}
 --- !u!1 &1110291408
 GameObject:
