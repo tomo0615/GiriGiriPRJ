@@ -1280,7 +1280,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &416186062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3471,6 +3471,15 @@ PrefabInstance:
       propertyPath: displayWindow
       value: 
       objectReference: {fileID: 1059630186}
+    - target: {fileID: 1268254142, guid: b6e33f7de41b1c34ba966d4f1f35f4d4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: eafb64d1eab2c394592cd4421d834542,
+        type: 3}
+    - target: {fileID: 1268254142, guid: b6e33f7de41b1c34ba966d4f1f35f4d4, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6e33f7de41b1c34ba966d4f1f35f4d4, type: 3}
 --- !u!1 &1110291408
