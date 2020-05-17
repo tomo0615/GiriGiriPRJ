@@ -53,7 +53,6 @@ public class PlayerController : MonoBehaviour,IPlayerCollider
             .Where(x => Mathf.Abs(x.x) < 3)
             .Subscribe(x =>
             {
-                Debug.Log(x);
                 _playerMover.Move(x);
 
                 SoundManager.Instance.PlaySoundOneShot(SoundType.move);

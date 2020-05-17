@@ -25,7 +25,7 @@ public abstract class BaseEnemy : MonoBehaviour
 
         return Observable
             .Timer(TimeSpan.FromSeconds(fallTime))
-            .ForEachAsync(_ => Debug.Log("よけた"));
+            .ForEachAsync(_ => gameObject.SetActive(false));
     }
 
     private void OnTriggerEnter(Collider other)
