@@ -467,8 +467,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: b8057c2a0374dec4aa954bce8947b61b, type: 3}
-  amount: 0.01
-  angle: 0
+  amount: 0.008
+  angle: 33.5
 --- !u!114 &1093454626 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6932670815214595161, guid: e0a588f287d9b3b47aaaf58d5584b7a6,
