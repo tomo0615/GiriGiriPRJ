@@ -1517,8 +1517,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: b8057c2a0374dec4aa954bce8947b61b, type: 3}
-  amount: 0.009
-  angle: 0
+  amount: 0.008
+  angle: 33.5
 --- !u!1 &327204098
 GameObject:
   m_ObjectHideFlags: 0
