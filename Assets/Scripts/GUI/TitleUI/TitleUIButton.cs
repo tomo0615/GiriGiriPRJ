@@ -1,26 +1,22 @@
 ﻿using UnityEngine;
-using DG.Tweening;
 
 public class TitleUIButton : BaseButton
 {
     [SerializeField]
-    private RectTransform displayWindow = null;
+    private WindowView _windowView = default;
 
     [SerializeField]
-    private bool displayableWindow = true;
+    private bool isDisplayableWindow = true;
 
     protected override void OnPushed()
     {
         base.OnPushed();
 
-        //Windowの表示
         SetActiveWindow();
-        //Windowの表示アニメーション
-
     }
 
     private void SetActiveWindow()
     {
-        displayWindow.gameObject.SetActive(displayableWindow);
+        _windowView.SetActiveWindow(isDisplayableWindow);
     }
 }
