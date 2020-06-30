@@ -507,9 +507,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1176944678}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 2105e3b274a35453f89279fbef307f02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  applicationKey: 3247405ae221a7393824e4a0d959b2b15e814a34e5cf776295a5f3e872ddebc7
+  clientKey: 4f5e8ce502f521f0b27fa87c768a6456bd7630ef16cea3d518161ac95b721a24
+  usePush: 0
+  useAnalytics: 0
+  responseValidation: 0
 --- !u!4 &1176944680
 Transform:
   m_ObjectHideFlags: 0
@@ -1528,7 +1533,7 @@ PrefabInstance:
     - target: {fileID: 6901394388582239601, guid: f57b30f08ab802f41a75106be11c400c,
         type: 3}
       propertyPath: inputType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5837169643672912598, guid: f57b30f08ab802f41a75106be11c400c,
         type: 3}
@@ -1559,7 +1564,7 @@ PrefabInstance:
       objectReference: {fileID: 629733767}
     - target: {fileID: 1562969943, guid: e0a588f287d9b3b47aaaf58d5584b7a6, type: 3}
       propertyPath: playerInputType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6932670815170551390, guid: e0a588f287d9b3b47aaaf58d5584b7a6,
         type: 3}
